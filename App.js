@@ -1,8 +1,6 @@
 // src/App.js
 
 import React, { useState } from 'react'; 
-// HAPUS 'Container' dan 'Button' dari 'react-bootstrap' jika tidak dipakai di sini
-// TAPI KITA MASIH PAKAI 'Container' untuk layout
 import { Container, Button } from 'react-bootstrap'; 
 import TaskList from './components/TaskList'; 
 import TaskForm from './components/TaskForm'; 
