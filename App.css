@@ -1,0 +1,148 @@
+/* src/App.css */
+
+/* Mengimpor font yang mirip dengan gambar */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+  background-color: #f4f7fa; /* Latar belakang abu-abu muda */
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+/* Kontainer utama aplikasi */
+.app-container {
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+/* Header (Task List + Tombol Add) */
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.task-header h1 {
+  font-weight: 700;
+  margin: 0;
+  font-size: 2.25rem;
+}
+
+/* Mengganti gaya tombol Bootstrap */
+.btn-primary {
+  background-color: #6C63FF; /* Warna ungu */
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 10px 20px;
+  box-shadow: 0 4px 12px rgba(108, 99, 255, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #5a52d9; /* Warna ungu lebih gelap saat hover */
+  transform: translateY(-2px);
+}
+
+/* Gaya untuk setiap item tugas */
+.task-item {
+  display: grid;
+  grid-template-columns: auto 1fr 100px 120px 80px; /* 5 kolom: Toggle, Task, Priority, Status, Actions */
+  align-items: center;
+  gap: 16px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+.task-item:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Kolom 1: Lingkaran Toggle */
+.task-toggle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #e0e0e0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.task-toggle.completed {
+  background-color: #6C63FF;
+  border-color: #6C63FF;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+}
+
+/* Kolom 2: Judul Tugas */
+.task-title {
+  font-weight: 500;
+}
+
+.task-title.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Kolom 3: Prioritas (Pill/Badge) */
+.task-priority .priority-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.85em;
+  text-align: center;
+  display: inline-block;
+}
+
+.priority-High {
+  color: #E53E3E; /* Merah */
+  background-color: #FED7D7;
+}
+.priority-Medium {
+  color: #DD6B20; /* Oranye */
+  background-color: #FEEBC8;
+}
+.priority-Low {
+  color: #38A169; /* Hijau */
+  background-color: #C6F6D5;
+}
+
+/* Kolom 4: Status (Pill/Badge) */
+.task-status .status-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 0.85em;
+  color: #4A5568;
+  background-color: #E2E8F0;
+}
+
+/* Kolom 5: Tombol Aksi (Ikon) */
+.task-actions {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.task-actions .icon-btn {
+  cursor: pointer;
+  color: #718096;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  padding: 5px;
+}
+
+.task-actions .icon-btn:hover {
+  color: #E53E3E; /* Ikon Hapus jadi merah saat hover */
+}
+
+.task-actions .icon-btn.edit:hover {
+  color: #6C63FF; /* Ikon Edit jadi ungu saat hover */
+}
